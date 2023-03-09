@@ -4,7 +4,7 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("example")
+@ConfigGroup("parmrlp")
 public interface ParmRLPConfig extends Config
 {
 	@ConfigItem(
@@ -14,6 +14,22 @@ public interface ParmRLPConfig extends Config
 	)
 	default String greeting()
 	{
-		return "Hello";
+		return "Hello!";
 	}
 }
+
+	/*
+	Config types:
+	-------------
+	boolean = Checkbox
+	int = Spinner
+	awt.Dimension = Spinners x2
+	String = Text box
+	Color = Color picker
+	Enum = Combobox
+
+	RuneLite stores the values automatically.
+	Can be called after @Inject ParmRLPConfig elsewhere and calling config.settingName()
+	See https://github.com/runelite/runelite/wiki/Code-Conventions
+
+	 */
