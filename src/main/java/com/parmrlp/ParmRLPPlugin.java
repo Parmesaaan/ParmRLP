@@ -14,7 +14,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "ParmRLP"
 )
 public class ParmRLPPlugin extends Plugin
 {
@@ -27,13 +27,13 @@ public class ParmRLPPlugin extends Plugin
 	@Override
 	protected void startUp() throws Exception
 	{
-		log.info("Example started!");
+		log.info("ParmRLP started!");
 	}
 
 	@Override
 	protected void shutDown() throws Exception
 	{
-		log.info("Example stopped!");
+		log.info("ParmRLP stopped!");
 	}
 
 	@Subscribe
@@ -41,7 +41,7 @@ public class ParmRLPPlugin extends Plugin
 	{
 		if (gameStateChanged.getGameState() == GameState.LOGGED_IN)
 		{
-			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Example says " + config.greeting(), null);
+			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "ParmRLP says " + config.greeting(), null);
 		}
 	}
 
